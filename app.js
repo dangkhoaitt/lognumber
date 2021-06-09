@@ -18,5 +18,5 @@ async function LogNumber(arrNum) {
   log();
 }
 
-let numbers = [0, 1, 2, 3, 4, 5];
+let numbers = [0, 1, 2, 3, 4, 5, 6];
 LogNumber(numbers);
