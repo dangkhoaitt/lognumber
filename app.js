@@ -1,8 +1,8 @@
-function delay(delayInms) {
+function delay(index) {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(2);
-    }, delayInms);
+      resolve(index);
+    }, index * 1000);
   });
 }
 
@@ -19,4 +19,12 @@ async function LogNumber(arrNum) {
 }
 
 let numbers = [0, 1, 2, 3, 4, 5, 6];
-LogNumber(numbers);
+
+// numbers.map(async (_, index) => {
+//   delay(index).then((res) => console.log(numbers[res]));
+// });
+
+numbers.map(async (_, index) => {
+  await delay(index);
+  console.log(numbers[index]);
+});
